@@ -40,12 +40,11 @@ const Navbar = () => {
 
         <div className="flex items-center p-2 justify-between flex-row gap-5">
           {Socials.map((social) => (
-            <a className=" cursor-pointer" href={social.link}>
+            <a key={social.name} className=" cursor-pointer" href={social.link}>
               <Image
                 className="hover:scale-95 "
                 src={social.src}
                 alt={social.name}
-                key={social.name}
                 width={24}
                 height={24}
               />
