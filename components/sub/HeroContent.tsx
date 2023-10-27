@@ -49,19 +49,19 @@ const HeroContent = () => {
         <div className="group relative">
           <motion.p
             variants={slideInFromRight(0.8)}
-            className="text-lg text-gray-400 my-5 shadow-lg transition-all duration-1000 max-w-[600px] "
+            className="text-lg text-gray-400  shadow-lg transition-all duration-1000 max-w-[600px] "
           >
             I'm a Full Stack Software Engineer with experience in Website,
             Mobile, and Software development. Check out my projects and skills.
-            <div className=" opacity-0 h-0 group-hover:opacity-100 group-visited:h-30 transition-all duration-1000 ease-in-out ">
-              My experience in React has equipped me to tackle complex projects
-              and deliver outstanding results. I look forward to the chance to
-              discuss how my expertise can benefit your company and contribute
-              to its continued success.
-            </div>
-            <motion.p variants={slideInFromRight(3)}>
-              <ChevronDownIcon className="w-12 h-12 text-gray-500  group-hover:rotate-180  transition-all duration-1000 ease-in-out" />
-            </motion.p>
+          </motion.p>
+          <motion.p variants={slideInFromRight(3)}>
+            <ChevronDownIcon className="w-12 h-12 text-gray-500  group-hover:rotate-180  transition-all duration-1000 ease-in-out" />
+          </motion.p>
+          <motion.p className=" opacity-0 text-gray-400 group-hover:opacity-100  transition-all duration-1000 ease-in-out ">
+            My experience in React has equipped me to tackle complex projects
+            and deliver outstanding results. I look forward to the chance to
+            discuss how my expertise can benefit your company and contribute to
+            its continued success.
           </motion.p>
         </div>
       </div>
