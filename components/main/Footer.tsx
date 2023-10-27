@@ -53,9 +53,7 @@ const Footer = () => {
               <span className="text-[15px] ml-[6px]">Learning about me</span>
             </p>
             <p className="flex flex-row items-center my-[15px] cursor-pointer">
-              <span className="text-[15px] ml-[6px]">
-                mifwebchain@gmail.com
-              </span>
+              <span className="text-[15px] ml-[6px]">manea5505@gmail.com</span>
             </p>
           </div>
         </div>
