@@ -54,9 +54,7 @@ const HeroContent = () => {
             I'm a Full Stack Software Engineer with experience in Website,
             Mobile, and Software development. Check out my projects and skills.
           </motion.p>
-          <motion.p variants={slideInFromRight(3)}>
-            <ChevronDownIcon className="w-12 h-12 text-gray-500  group-hover:rotate-180  transition-all duration-1000 ease-in-out" />
-          </motion.p>
+
           <motion.p className=" opacity-0 text-gray-400 group-hover:opacity-100  transition-all duration-1000 ease-in-out ">
             My experience in React has equipped me to tackle complex projects
             and deliver outstanding results. I look forward to the chance to
