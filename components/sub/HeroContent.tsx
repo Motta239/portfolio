@@ -7,11 +7,7 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from '@/utils/motion'
-import {
-  ChevronDoubleDownIcon,
-  ChevronDownIcon,
-  SparklesIcon,
-} from '@heroicons/react/24/solid'
+import { SparklesIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
 const HeroContent = () => {
@@ -46,14 +42,6 @@ const HeroContent = () => {
             project exprience
           </span>
         </motion.div>
-
-        <motion.p
-          variants={slideInFromRight(0.8)}
-          className="text-lg text-gray-400  shadow-lg transition-all duration-1000 max-w-[600px] "
-        >
-          I'm a Full Stack Software Engineer with experience in Website, Mobile,
-          and Software development. Check out my projects and skills.
-        </motion.p>
 
         <motion.p className=" opacity-0 text-gray-400 group-hover:opacity-100  transition-all duration-1000 ease-in-out ">
           My experience in React has equipped me to tackle complex projects and
