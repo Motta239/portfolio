@@ -1,16 +1,21 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   slideInFromLeft,
   slideInFromRight,
   slideInFromTop,
 } from '@/utils/motion'
-import { SparklesIcon } from '@heroicons/react/24/solid'
+import {
+  ChevronDoubleDownIcon,
+  ChevronDownIcon,
+  SparklesIcon,
+} from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
 const HeroContent = () => {
+  const [showMore, setShowMore] = useState(false)
   return (
     <motion.div
       initial="hidden"
@@ -41,20 +46,24 @@ const HeroContent = () => {
             project exprience
           </span>
         </motion.div>
-
-        <motion.p
-          variants={slideInFromRight(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
-        >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
-        </motion.p>
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
+        <div className="group relative">
+          <motion.p
+            variants={slideInFromRight(0.8)}
+            className="text-lg text-gray-400 my-5 shadow-lg transition-all duration-1000 max-w-[600px] "
+          >
+            I'm a Full Stack Software Engineer with experience in Website,
+            Mobile, and Software development. Check out my projects and skills.
+            <div className=" opacity-0 h-0 group-hover:opacity-100 group-visited:h-30 transition-all duration-1000 ease-in-out ">
+              My experience in React has equipped me to tackle complex projects
+              and deliver outstanding results. I look forward to the chance to
+              discuss how my expertise can benefit your company and contribute
+              to its continued success.
+            </div>
+            <motion.p variants={slideInFromRight(3)}>
+              <ChevronDownIcon className="w-12 h-12 text-gray-500  group-hover:rotate-180  transition-all duration-1000 ease-in-out" />
+            </motion.p>
+          </motion.p>
+        </div>
       </div>
 
       <motion.div
