@@ -9,6 +9,7 @@ import {
 } from '@/utils/motion'
 import { SparklesIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const HeroContent = () => {
   const [showMore, setShowMore] = useState(false)
@@ -16,7 +17,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row  group relative  items-centerjustify-center px-20 mt-40 w-full z-[20]"
+      className="flex md:flex-row  group relative  items-centerjustify-center px-20 mt-40 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
@@ -42,14 +43,17 @@ const HeroContent = () => {
             project exprience
           </span>
         </motion.div>
+
         <motion.p
           variants={slideInFromRight(0.8)}
-          className="text-lg text-gray-400  max-w-[600px]"
+          className="text-lg text-gray-400  relative max-w-[600px]"
         >
           I&apos;m a Full Stack Software Engineer with experience in Website,
           Mobile, and Software development. Check out my projects and skills.
+          <ChevronDownIcon className=" text-gray-300 group-hover:rotate-180 transition-all duration-1000  h-12 w-12 absolute right-0 bottom-0 " />
         </motion.p>
-        <motion.p className=" opacity-0 text-gray-400 group-hover:opacity-100  transition-all duration-1000 ease-in-out ">
+
+        <motion.p className=" opacity-0 text-gray-400 group-hover:opacity-100   transition-all duration-1000 ease-in-out ">
           My experience in React has equipped me to tackle complex projects and
           deliver outstanding results. I look forward to the chance to discuss
           how my expertise can benefit your company and contribute to its
