@@ -11,7 +11,6 @@ export default function Home() {
         <Hero />
         <Skills />
         <Projects />
-        {/* <Encryption /> */}
         <Footer />
       </div>
     </div>

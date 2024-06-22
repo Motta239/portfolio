@@ -40,10 +40,15 @@ const HeroContent = () => {
               {" "}
               Exceptional{" "}
             </span>
-            mobile{" "}
+            Apps With{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fff371d1] to-orange-500">
               {" "}
-              Exceptional{" "}
+              Expo {""}
+            </span>
+            And{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fff371d1] to-orange-500">
+              {" "}
+              React Native
             </span>
           </span>
         </motion.div>
@@ -57,17 +62,14 @@ const HeroContent = () => {
           skills.
           <motion.button
             onClick={() => setShowMore(!showMore)}
-            className=" text-white rounded-lg  text-lg transition-all duration-500"
-          >
-            {showMore ? "Show Less" : "Show More"}
-          </motion.button>
+            className=" text-white rounded-2xl  text-lg transition-all duration-500"
+          ></motion.button>
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
-          animate={showMore ? { opacity: 1 } : { opacity: 0 }}
           variants={slideInFromRight(0.8)}
           transition={{ duration: 0.5 }}
-          className="text-gray-400  text-lg"
+          className="text-gray-400   text-2xl"
         >
           My expertise in React Native and Expo allows me to create seamless,
           performant, and visually appealing mobile applications. I am
