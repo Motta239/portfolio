@@ -1,5 +1,5 @@
-import React from 'react'
-import HeroContent from '../sub/HeroContent'
+import React from "react";
+import HeroContent from "../sub/HeroContent";
 
 const Hero = () => {
   return (
@@ -14,7 +14,7 @@ const Hero = () => {
       </video>
       <HeroContent />
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

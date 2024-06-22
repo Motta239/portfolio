@@ -1,12 +1,12 @@
-import { Backend_skill, Frontend_skill, Full_stack } from '@/constants'
-import React from 'react'
-import SkillDataProvider from '../sub/SkillDataProvider'
-import SkillText from '../sub/SkillText'
+import { Backend_skill, Frontend_skill, Full_stack } from "@/constants";
+import React from "react";
+import SkillDataProvider from "../sub/SkillDataProvider";
+import SkillText from "../sub/SkillText";
 
 interface SkillImage {
-  Image: string
-  width: number
-  height: number
+  Image: string;
+  width: number;
+  height: number;
 }
 
 const SkillCategory: React.FC<{ skills: SkillImage[] }> = ({ skills }) => (
@@ -21,14 +21,14 @@ const SkillCategory: React.FC<{ skills: SkillImage[] }> = ({ skills }) => (
       />
     ))}
   </div>
-)
+);
 
 const Skills: React.FC = () => {
   return (
     <section
       id="skills"
       className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden"
-      style={{ transform: 'scale(0.9)' }}
+      style={{ transform: "scale(0.9)" }}
     >
       <SkillText />
       <SkillCategory skills={Frontend_skill} />
@@ -48,7 +48,7 @@ const Skills: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

@@ -1,8 +1,8 @@
-import Encryption from '@/components/main/Encryption'
-import Footer from '@/components/main/Footer'
-import Hero from '@/components/main/Hero'
-import Projects from '@/components/main/Projects'
-import Skills from '@/components/main/Skils'
+import Encryption from "@/components/main/Encryption";
+import Footer from "@/components/main/Footer";
+import Hero from "@/components/main/Hero";
+import Projects from "@/components/main/Projects";
+import Skills from "@/components/main/Skils";
 
 export default function Home() {
   return (
@@ -11,9 +11,9 @@ export default function Home() {
         <Hero />
         <Skills />
         <Projects />
-        <Encryption />
+        {/* <Encryption /> */}
         <Footer />
       </div>
     </div>
-  )
+  );
 }

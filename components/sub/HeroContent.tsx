@@ -1,18 +1,18 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   slideInFromLeft,
   slideInFromRight,
   slideInFromTop,
-} from '@/utils/motion'
-import { SparklesIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+} from "@/utils/motion";
+import { SparklesIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const HeroContent = () => {
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(false);
   return (
     <motion.div
       initial="hidden"
@@ -26,7 +26,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Fullstack Developer Portfolio
+            React Native Expo Developer Portfolio
           </h1>
         </motion.div>
 
@@ -35,29 +35,46 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing
+            Crafting
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fff371d1] to-cyan-500">
-              {' '}
-              the best{' '}
+              {" "}
+              Exceptional{" "}
             </span>
-            project exprience
+            mobile{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fff371d1] to-orange-500">
+              {" "}
+              Exceptional{" "}
+            </span>
           </span>
         </motion.div>
 
         <motion.p
           variants={slideInFromRight(0.8)}
-          className="text-lg text-gray-400  relative max-w-[600px]"
+          className="text-2xl text-gray-400  relative max-w-[600px]"
         >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
-          <ChevronDownIcon className=" text-gray-300 group-hover:rotate-180 transition-all duration-1000  h-12 w-12 absolute right-0 bottom-0 " />
+          I&apos;m a React Native Expo Developer with extensive experience in
+          building high-quality mobile applications. Check out my projects and
+          skills.
+          <motion.button
+            onClick={() => setShowMore(!showMore)}
+            className=" text-white rounded-lg  text-lg transition-all duration-500"
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </motion.button>
         </motion.p>
-
-        <motion.p className=" opacity-0 text-gray-400 group-hover:opacity-100   transition-all duration-1000 ease-in-out ">
-          My experience in React has equipped me to tackle complex projects and
-          deliver outstanding results. I look forward to the chance to discuss
-          how my expertise can benefit your company and contribute to its
-          continued success.
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={showMore ? { opacity: 1 } : { opacity: 0 }}
+          variants={slideInFromRight(0.8)}
+          transition={{ duration: 0.5 }}
+          className="text-gray-400  text-lg"
+        >
+          My expertise in React Native and Expo allows me to create seamless,
+          performant, and visually appealing mobile applications. I am
+          proficient in JavaScript, TypeScript, and have a strong understanding
+          of mobile app architecture and design principles. I am passionate
+          about delivering high-quality code and continuously improving my
+          skills to stay up-to-date with the latest industry trends.
         </motion.p>
       </div>
 
@@ -73,7 +90,7 @@ const HeroContent = () => {
         />
       </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default HeroContent
+export default HeroContent;
