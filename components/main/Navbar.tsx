@@ -16,6 +16,7 @@ const links: LinkItem[] = [
 ];
 
 import { Socials } from "@/constants";
+import { Download, DownloadCloud, LucideDownloadCloud } from "lucide-react";
 
 const CustomNavbar = () => {
   const [visible, setVisible] = useState(true);
@@ -40,10 +41,10 @@ const CustomNavbar = () => {
     <nav
       className={`fixed top-0 w-full ${
         visible ? "opacity-100" : "opacity-0"
-      } transition-opacity duration-300 ease-in-out shadow-lg bg-[#03001417]/50 backdrop-blur-md z-50 px-5`}
+      } transition-opacity duration-300 ease-in-out  shadow-lg bg-[#03001417]/50 backdrop-blur-md z-50 px-5`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between py-2">
-        <Link href="#about-me" passHref>
+      <div className=" mx-auto flex items-center  sm:justify-between  py-2">
+        <Link href="#about-me" className="md:w-1/3 w-1/2 " passHref>
           <div className="flex items-center space-x-2 cursor-pointer">
             <Image
               src="/profile.jpg"
@@ -58,7 +59,7 @@ const CustomNavbar = () => {
           </div>
         </Link>
 
-        <div className="hidden sm:flex space-x-4">
+        <div className="hidden w-1/3 md:flex gap-4">
           {links.map((link, index) => (
             <Link key={index} href={link.href} passHref>
               <span className="text-white hover:text-gray-300 transition-colors cursor-pointer">
@@ -68,27 +69,7 @@ const CustomNavbar = () => {
           ))}
         </div>
 
-        <div className="flex space-x-3 items-center">
-          <a
-            href="/MOTI_YOSEF_CV.pdf"
-            download
-            className="text-white hover:text-gray-300 transition-colors cursor-pointer flex items-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 mr-1"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm7 7a1 1 0 00-1 1v4a1 1 0 102 0v-4a1 1 0 00-1-1zm-2.293-.293a1 1 0 011.414 0L10 10.586V5a1 1 0 112 0v5.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-            Resume
-          </a>
-
+        <div className="flex md:w-1/3 w-1/2   justify-end gap-3  items-center">
           {Socials.map((social, index) => (
             <Link key={index} href={social.link} passHref>
               <div className="block cursor-pointer">
@@ -102,6 +83,13 @@ const CustomNavbar = () => {
               </div>
             </Link>
           ))}
+          <a
+            href="/MOTI_YOSEF_CV.pdf"
+            download
+            className="text-white hover:text-gray-300 transition-colors cursor-pointer flex items-center"
+          >
+            <Download className="w-5 h-5 mr-1" />
+          </a>
         </div>
       </div>
     </nav>
