@@ -36,9 +36,9 @@ const HeroContent: React.FC = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex md:flex-row group relative items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col md:flex-row group relative items-center justify-center lg:px-20 mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto rounded-xl backdrop-blur-3xl  p-4 md:p-10 text-start">
         <motion.div
           variants={slideInFromTop}
           className="py-[8px] px-[7px] border border-[#7042f88b] rounded-full flex w-fit opacity-[0.9]"
@@ -74,34 +74,26 @@ const HeroContent: React.FC = () => {
 
         <motion.p
           variants={slideInFromRight(0.8)}
-          className="text-2xl text-gray-400 relative max-w-[600px]"
+          className="text-2xl text-gray-100 relative max-w-[600px]"
         >
           I&apos;m a React Native Expo Developer with extensive experience in
           building high-quality mobile applications. Check out my projects and
           skills.
-          <motion.button
-            onClick={() => setShowMore(!showMore)}
-            className="text-white rounded-2xl text-lg transition-all duration-500"
-          >
-            {showMore ? "Show Less" : "Show More"}
-          </motion.button>
         </motion.p>
-        {showMore && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-gray-400 text-2xl"
-          >
-            My expertise in React Native and Expo allows me to create seamless,
-            performant, and visually appealing mobile applications. I am
-            proficient in JavaScript, TypeScript, and have a strong
-            understanding of mobile app architecture and design principles. I am
-            passionate about delivering high-quality code and continuously
-            improving my skills to stay up-to-date with the latest industry
-            trends.
-          </motion.p>
-        )}
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="text-gray-100 text-2xl"
+        >
+          My expertise in React Native and Expo allows me to create seamless,
+          performant, and visually appealing mobile applications. I am
+          proficient in JavaScript, TypeScript, and have a strong understanding
+          of mobile app architecture and design principles. I am passionate
+          about delivering high-quality code and continuously improving my
+          skills to stay up-to-date with the latest industry trends.
+        </motion.p>
       </div>
       <motion.div
         variants={slideInFromRight(0.8)}

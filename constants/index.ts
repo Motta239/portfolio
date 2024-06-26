@@ -109,13 +109,22 @@ export const projectData = [
     title: "WhatsApp Clone App",
     description:
       "This is a WhatsApp clone app that allows users to chat with each other in real-time. It is built using React Native, Expo, and Supabase.",
+    features: [
+      "React Native",
+      "Expo",
+      "Supabase",
+      "expo router",
+      "Real time chat",
+      "Keyboard Controlled",
+    ],
     link: "https://github.com/Motta239/whatsapp",
   },
   {
-    src: "/CardImage.png",
+    src: "/chatGPT.png",
     title: "ChatGPT Clone App",
     description:
       "This is a ChatGPT clone app that allows users to chat with ChatGPT in real-time. It is built using React Native, Expo, OpenAI api, and Supabase.",
+    features: ["React Native", "Expo", "OpenAI api", "Supabase", "NativeUI"],
     link: "https://github.com/Motta239/ChatGPT-Clone",
   },
   {
@@ -123,6 +132,7 @@ export const projectData = [
     title: "Airbnb Clone App",
     description:
       "This is a Airbnb clone app that allows users to book hotels and apartments in real-time. It is built using React Native, Expo, and Supabase.",
+    features: ["React Native", "Expo", "Supabase", "styled components"],
     link: "https://github.com/Motta239/Airbnb-Clone",
   },
 ];
