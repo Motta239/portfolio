@@ -59,17 +59,17 @@ const CustomNavbar = () => {
           </div>
         </Link>
 
-        <div className="hidden w-1/3 md:flex gap-4">
+        <div className="hidden w-1/3 md:flex items-center  justify-center gap-4">
           {links.map((link, index) => (
             <Link key={index} href={link.href} passHref>
-              <span className="text-white hover:text-gray-300 transition-colors cursor-pointer">
+              <span className="text-white hover:text-gray-300  transition-colors cursor-pointer">
                 {link.title}
               </span>
             </Link>
           ))}
         </div>
 
-        <div className="flex md:w-1/3 w-1/2   justify-end gap-3  items-center">
+        <div className="flex md:w-1/3 w-1/2   justify-end gap-3   items-center">
           {Socials.map((social, index) => (
             <Link key={index} href={social.link} passHref>
               <div className="block cursor-pointer">

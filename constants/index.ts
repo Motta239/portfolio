@@ -135,6 +135,14 @@ export const projectData = [
     features: ["React Native", "Expo", "Supabase", "styled components"],
     link: "https://github.com/Motta239/Airbnb-Clone",
   },
+  {
+    src: "/maps.png",
+    title: "Maps Clone App",
+    description:
+      "This is a Maps clone app that Provieds Maps Views and functionalty in real-time. It is built using React Native, React native Maps , Expo, and Supabase .",
+    features: ["React Native", "Expo", "Supabase", "styled components"],
+    link: "https://github.com/Motta239/Maps-Clone",
+  },
 ];
 
 export const Frontend_skill = [
